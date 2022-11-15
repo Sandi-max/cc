@@ -1,0 +1,51 @@
+#include<stdio.h>
+#include <string.h>
+
+int main(){
+   char str[] = {"aaabbbabbaaaba"};
+   int lenght = strlen(str);
+   int i = 0,a=0;
+   while(i!=strlen(str))
+   {
+   if(str[i] == 'a' && i<= strlen(str)-3)
+   {
+      if(str[i++]=='a')
+      {
+          if(str[i++]=='a')
+          {
+              a=1;
+          }
+          else
+          {
+              i--;
+              a=0;
+              
+          }
+      }
+      else
+      {a=0;
+          i--;
+      }
+   }
+   else if(str[i]=='b')
+   {
+       a=0;
+   }
+   
+else
+{
+         a=0;
+      }
+      i++;
+   
+   }
+
+if(a== 0)
+{
+    printf("aaaa");
+}
+else{
+    printf("bbb");
+}
+    
+}
